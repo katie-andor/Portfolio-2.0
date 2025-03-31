@@ -1,42 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 #root {
-  max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
+  font-family: 'Prompt', 'Arial', sans-serif;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+html{
+  scroll-behavior: smooth;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+body{
+  background-image: url('/images/griid.png');
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+@keyframes popIn {
+  0% {
+    transform: translateY(10px);
+    opacity: 0;
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    transform: translateY(-65px); 
+    opacity: 1;
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  100% {
+    transform: translateY(0); 
   }
 }
 
 .card {
-  padding: 2em;
+  animation: popIn 0.7s ease-out forwards;
 }
 
-.read-the-docs {
-  color: #888;
-}
