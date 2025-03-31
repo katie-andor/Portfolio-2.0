@@ -94,7 +94,7 @@ function App() {
                 <img src={project.image} alt={project.alt} />
                 <div className="flex flex-grow"></div>
                 <div
-                  className="bg-black rounded-bl-[36px] rounded-br-[36px] absolute bottom-4 w-full transition-all duration-500 ease-in-out group-hover:h-full group-hover:translate-y-[40px] transform translate-y-[290px] flex flex-col"
+                  className="bg-black rounded-bl-[36px] rounded-br-[36px] absolute bottom-4 w-full transition-all duration-500 ease-in-out group-hover:h-full group-hover:translate-y-[20px] transform translate-y-[290px] flex flex-col"
                   style={{ height: "300px" }}
                 >
                   <div className="flex justify-center items-center">
@@ -104,9 +104,15 @@ function App() {
                       alt="An up arrow icon."
                     />
                   </div>
-                  <div className="flex flex-col opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-in-out transform translate-y-10 m-4 z-10">
+                  <div className="flex flex-col h-full opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-in-out transform translate-y-10 mr-6 ml-6 mb-6 mt-4 z-10">
                     <h3 className="text-xl font-bold">{project.title}</h3>
                     <p className="text-lg">{project.description}</p>
+                    <div className=" flex flex-grow"></div>
+                    <div className='flex flex-row mb-4 gap-4'>
+                      {project.tools.map((tool, i) =>  (
+                        <p key={i} className="border-white border-solid border-2 pl-2 pr-2 rounded-[5px]">{tool}</p>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
