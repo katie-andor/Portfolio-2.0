@@ -170,8 +170,8 @@ function App() {
         Certifications
       </h2>
       <div className='flex flex-row flex-wrap justify-evenly bg-black w-full rounded-[36px]'>
-        <img tabIndex={0} src={uxcertification} alt="" className="w-[45%] rounded-[12px] m-4"/>
-        <img tabIndex={0} src={backendcertification} alt="" className="w-[45%] rounded-[12px] m-4"/>
+        <img tabIndex={0} src={uxcertification} alt="A certification for Google's UX Design course." className="w-[45%] rounded-[12px] m-4"/>
+        <img tabIndex={0} src={backendcertification} alt="A certification for Free Code Camp's Backend and API course." className="w-[45%] rounded-[12px] m-4"/>
       </div>
     </>
   );
