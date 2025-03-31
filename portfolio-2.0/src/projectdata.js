@@ -8,7 +8,7 @@ import quiz from './projectdataimages/QuizImage.png'
 
 const projects = [
     {
-        title: 'Portfolio Website',
+        title: 'Portfolio Website 1.0',
         description: 'Personal website to show off my web development skillset and projects.',
         image: portfolio,
         link: 'https://github.com/katie-andor/portfolio-website',

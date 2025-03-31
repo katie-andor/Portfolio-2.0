@@ -6,7 +6,10 @@ import github from "/images/githubicon.svg";
 import email from "/images/emailicon.svg";
 import uparrow from "/images/uparrowicon.svg";
 import resume from "/images/resume.png";
-import projects from "./projectdata";
+import uxcertification from './certifications/uxdesign.png';
+import backendcertification from "./certifications/backend.png";
+import projects from "./projectdata.js";
+import skills from "./skillsdata.js"
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -32,13 +35,13 @@ function App() {
               </h2>
               <div className="flex flex-row ml-6 mt-4 gap-8">
                 <a href="https://www.linkedin.com/in/kaitlyn-andor/">
-                  <img src={linkedin} alt="The LinkedIn logo." className='rounded-[6px] border-4 border-transparent hover:border-[#FF4548]' />
+                  <img src={linkedin} alt="The LinkedIn logo." className='rounded-[6px] border-4 border-transparent hover:border-white' />
                 </a>
                 <a href="https://github.com/katie-andor">
-                  <img src={github} alt="The GitHub logo." className='rounded-[6px] border-4 border-transparent hover:border-[#FF4548]'/>
+                  <img src={github} alt="The GitHub logo." className='rounded-[6px] border-4 border-transparent hover:border-white'/>
                 </a>
                 <a href="">
-                  <img src={email} alt="An email icon." className='rounded-[6px] border-4 border-transparent hover:border-[#FF4548]'/>
+                  <img src={email} alt="An email icon." className='rounded-[6px] border-4 border-transparent hover:border-white'/>
                 </a>
               </div>
             </div>
@@ -51,9 +54,12 @@ function App() {
                 <a href="#aboutme-section">
                   <li className='hover:underline'>About Me/Resume</li>
                 </a>
-                <li>Skills</li>
-                <li>Certifications</li>
-                <li>Contact</li>
+                <a href="#skills-section">
+                  <li className='hover:underline'>Skills</li>
+                </a>
+                <a href="#certification-section">
+                  <li className='hover:underline'>Certifications</li>
+                </a>
               </ul>
             </div>
           </div>
@@ -140,6 +146,32 @@ function App() {
             </div>
           </div>
         </div>
+      </div>
+      <h2
+        className="ml-4 mt-14 text-[45px] text-[#454CFF] font-extrabold"
+        id="skills-section"
+      >
+        Skills
+      </h2>
+      <div className="flex flex-row justify-evenly flex-wrap">
+        {skills.map((skill, index) => {
+          return(
+            <div key={index} tabIndex={0} className="bg-[#454CFF] hover:bg-black rounded-[50px] text-white text-[22px] w-[200px] m-4 flex flex-row justify-evenly items-center p-2 transition-transform duration-300 hover:scale-115">
+              <img src={skill.image} alt={skill.alt} className='w-[50px]' />
+              <h3>{skill.caption}</h3>
+            </div>
+          );
+        })}
+      </div>
+      <h2
+        className="ml-4 mt-14 text-[45px] text-[#454CFF] font-extrabold"
+        id="certification-section"
+      >
+        Certifications
+      </h2>
+      <div className='flex flex-row flex-wrap justify-evenly bg-black w-full rounded-[36px]'>
+        <img tabIndex={0} src={uxcertification} alt="" className="w-[45%] rounded-[12px] m-4"/>
+        <img tabIndex={0} src={backendcertification} alt="" className="w-[45%] rounded-[12px] m-4"/>
       </div>
     </>
   );
