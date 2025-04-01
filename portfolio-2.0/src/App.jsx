@@ -80,7 +80,7 @@ function App() {
           </div>
         </div>
         <div>
-          {/* <div className="flex flex-row gap-4 justify-center sm:hidden mt-4">
+          <div className="flex flex-row gap-4 justify-center sm:hidden mt-4">
             <a href="https://www.linkedin.com/in/kaitlyn-andor/">
               <img
                 src={linkedin}
@@ -102,7 +102,7 @@ function App() {
                 className="w-[55px] bg-[#454CFF] rounded-[40px] p-[10px]"
               />
             </a>
-          </div> */}
+          </div>
           <img
             src={profilepicture}
             alt="A photo of Kaitlyn Andor smiling in a portrait style, shoulders up."
@@ -123,16 +123,16 @@ function App() {
             <a href={project.link} target="_blank">
               <div
                 key={index}
-                className={`card w-full h-[50vw] sm:h-[350px] md:h-[250px] lg:h-[300px] xl:h-[250px] 2xl:h-[290px] bg-white rounded-[36px] text-white border-2 border-black flex flex-col relative group overflow-hidden transform transition-all duration-1000 ease-out ${
+                className={`card w-full h-[50vw] sm:h-[370px] md:h-[250px] lg:h-[300px] xl:h-[250px] 2xl:h-[330px] bg-white rounded-[36px] text-white border-2 border-black flex flex-col relative group overflow-hidden transform transition-all duration-1000 ease-out ${
                   isLoaded
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-10"
                 }`}
               >
                 <img className="h-full" src={project.image} alt={project.alt} />
-                <div className="flex flex-grow"></div>
+                <div className="hidden md:flex flex-grow"></div>
                 <div
-                  className="bg-black rounded-bl-[36px] rounded-br-[36px] absolute bottom-4 w-full transition-all duration-500 ease-in-out group-hover:h-full group-hover:translate-y-[20px] transform translate-y-[290px] flex flex-col"
+                  className="bg-black rounded-bl-[36px] rounded-br-[36px] absolute bottom-4 w-full transition-all duration-500 ease-in-out group-hover:h-full group-hover:translate-y-[20px] transform translate-y-[290px] hidden md:flex flex-col"
                   style={{ height: "300px" }}
                 >
                   <div className="flex justify-center items-center">
@@ -158,6 +158,10 @@ function App() {
                     </div>
                   </div>
                 </div>
+              </div>
+              <div className="md:hidden bg-black text-white mt-4 p-4 rounded-[36px]">
+                <h3 className="text-xl font-bold">{project.title}</h3>
+                <p className="text-md mt-2">{project.description}</p>
               </div>
             </a>
           );
@@ -203,7 +207,11 @@ function App() {
               tabIndex={0}
               className="bg-[#454CFF] hover:bg-black rounded-[50px] text-white text-[17px] sm:text-[22px] w-[130px] sm:w-[200px] mt-2 mb-4 sm:m-4 flex flex-row justify-evenly items-center p-2 transition-transform duration-300 hover:scale-115"
             >
-              <img src={skill.image} alt={skill.alt} className="w-[30px] sm:w-[50px]" />
+              <img
+                src={skill.image}
+                alt={skill.alt}
+                className="w-[30px] sm:w-[50px]"
+              />
               <h3>{skill.caption}</h3>
             </div>
           );
