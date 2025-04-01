@@ -37,7 +37,7 @@ const projects = [
         image: esports,
         link: 'https://esportsresearch.net/',
         alt: 'The home page of The Esports Research Networok website.',
-        tools: ['WordPress']
+        tools: ['WordPress', 'SEO']
     },
     {
         title: 'Pokedex Completion Tracker',
@@ -60,7 +60,7 @@ const projects = [
         image: NYIT,
         description: 'Utilization of WordPress blocks to update page layout for the new school website and old NYIT web pages to new ones, while also updating them to the new design.',
         alt: `The landing page of the New York Institute of Technology's website.`,
-        tools: ['WordPress']
+        tools: ['WordPress', 'SEO']
     }
 ]
 
