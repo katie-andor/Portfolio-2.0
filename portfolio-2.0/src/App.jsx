@@ -80,7 +80,7 @@ function App() {
           </div>
         </div>
         <div>
-          <div className="flex flex-row gap-4 justify-center sm:hidden mt-4">
+          {/* <div className="flex flex-row gap-4 justify-center sm:hidden mt-4">
             <a href="https://www.linkedin.com/in/kaitlyn-andor/">
               <img
                 src={linkedin}
@@ -102,7 +102,7 @@ function App() {
                 className="w-[55px] bg-[#454CFF] rounded-[40px] p-[10px]"
               />
             </a>
-          </div>
+          </div> */}
           <img
             src={profilepicture}
             alt="A photo of Kaitlyn Andor smiling in a portrait style, shoulders up."
