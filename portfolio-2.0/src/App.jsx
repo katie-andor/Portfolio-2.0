@@ -178,8 +178,8 @@ function App() {
         <div className="grid md:grid-cols-1 lg:grid-cols-2 m-4 md:m-8 text-white text-[35px] sm:text-[45px] font-extrabold">
           <div className="mt-4 lg:mt-4">
             <h2 id="aboutme-section" className="text-[35px] sm:text-[45px]">About Me</h2>
-            <p className="mb-4 text-sm sm:text-[22px] font-light">
-              My name is Kaitlyn Andor.
+            <p className="mb-4 text-[22px] font-light">
+              My name is Kaitlyn Andor and I'm a Junior Devloper based in New York. I have a passion for UX and UI design and hope to make the web more inclusive, accessible, and fun for all.
             </p>
           </div>
           <div className="mt-4 lg:mt-4">
