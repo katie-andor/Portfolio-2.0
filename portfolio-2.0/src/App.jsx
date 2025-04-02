@@ -26,7 +26,7 @@ function App() {
 
   return (
     <>
-      <div className="grid md:grid-cols-[75%_25%] grid-cols-1 sm:gap-8">
+      <div className="grid md:grid-cols-[74%_24%] grid-cols-1 sm:gap-8">
         <div className="bg-[#454CFF] rounded-[36px] leading-tight text-white">
           <div className="flex flex-row items-center sm:justify-start gap-4 sm:gap-6 h-full">
             <div>
@@ -37,22 +37,25 @@ function App() {
                 Web Developer
               </h2>
               <div className="hidden sm:flex flex-row ml-6 md:mt-2 lg:mt-4 sm:gap-4 md:gap-8">
-                <a href="https://www.linkedin.com/in/kaitlyn-andor/">
+                <a href="https://www.linkedin.com/in/kaitlyn-andor/" target="_blank">
                   <img
+                    title="Linkedin"
                     src={linkedin}
                     alt="The LinkedIn logo."
                     className="w-[40px] sm:w-[50px] lg:w-[75px] rounded-[6px] border-4 border-transparent hover:border-white"
                   />
                 </a>
-                <a href="https://github.com/katie-andor">
+                <a href="https://github.com/katie-andor" target="_blank">
                   <img
+                    title="Github"
                     src={github}
                     alt="The GitHub logo."
                     className="w-[40px] sm:w-[50px] lg:w-[75px] rounded-[6px] border-4 border-transparent hover:border-white"
                   />
                 </a>
-                <a href="">
+                <a href="mailto:kaitlynandor@gmail.com" target="_blank">
                   <img
+                    title="kaitlynandor@gmail.com"
                     src={email}
                     alt="An email icon."
                     className="w-[40px] sm:w-[50px] lg:w-[75px] rounded-[6px] border-4 border-transparent hover:border-white"
@@ -132,8 +135,12 @@ function App() {
                 <img className="h-full" src={project.image} alt={project.alt} />
                 <div className="hidden md:flex flex-grow"></div>
                 <div
-                  className="bg-black rounded-bl-[36px] rounded-br-[36px] absolute bottom-4 w-full transition-all duration-500 ease-in-out group-hover:h-full group-hover:translate-y-[20px] transform translate-y-[290px] hidden md:flex flex-col"
-                  style={{ height: "300px" }}
+                  className="h-[300px] bg-black rounded-bl-[36px] rounded-br-[36px] absolute bottom-4 w-full transition-all duration-500 ease-in-out group-hover:h-full 
+                  md:group-hover:translate-y-[16px] md:transform md:translate-y-[290px] 
+                  lg:group-hover:translate-y-[16px] lg:transform lg:translate-y-[370px] lg:h-[390px] 
+                  xl:group-hover:translate-y-[16px] xl:transform xl:translate-y-[380px] xl:h-[390px] 
+                  2xl:group-hover:translate-y-[15px] 2xl:transform 2xl:translate-y-[370px] 2xl:h-[390px] 
+                  hidden md:flex flex-col"
                 >
                   <div className="flex justify-center items-center">
                     <img
@@ -142,11 +149,11 @@ function App() {
                       alt="An up arrow icon."
                     />
                   </div>
-                  <div className="flex flex-col h-full opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-in-out transform translate-y-10 mr-6 ml-6 mb-6 mt-4 z-10">
+                  <div className="flex flex-col h-full opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-in-out transform translate-y-10 mr-6 ml-6 mb-6 xl:mt-2 2xl:mt-4 z-10">
                     <h3 className="text-xl font-bold">{project.title}</h3>
-                    <p className="text-lg">{project.description}</p>
+                    <p className="text-lg md:text-sm lg:text-lg xl:text-sm 2xl:text-lg">{project.description}</p>
                     <div className=" flex flex-grow"></div>
-                    <div className="flex flex-row mb-4 gap-4">
+                    <div className="flex flex-row mb-4 xl:mt-2 gap-4">
                       {project.tools.map((tool, i) => (
                         <p
                           key={i}
@@ -168,21 +175,15 @@ function App() {
         })}
       </div>
       <div className="bg-[#454CFF] w-full mr-auto ml-auto rounded-[36px] mt-18">
-        <div className="grid md:grid-cols-1 lg:grid-cols-2  m-8 text-white text-[35px] sm:text-[45px] font-extrabold">
+        <div className="grid md:grid-cols-1 lg:grid-cols-2 m-4 md:m-8 text-white text-[35px] sm:text-[45px] font-extrabold">
           <div className="mt-4 lg:mt-4">
-            <h2 id="aboutme-section">About Me</h2>
-            <p className="mb-4 text-[22px] font-light">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Vestibulum vitae elementum nisl. Vivamus consequat nisl tincidunt
-              massa placerat, quis sagittis nulla tristique. Phasellus eu tellus
-              nisl. Ut at libero nibh. Nam id est vestibulum, pretium purus
-              lacinia, blandit nisl. Praesent ipsum tellus, porttitor nec
-              rhoncus quis, gravida sit amet nulla. Fusce sit amet turpis nec
-              arcu tristique bibendum posuere a dolor.
+            <h2 id="aboutme-section" className="text-[35px] sm:text-[45px]">About Me</h2>
+            <p className="mb-4 text-sm sm:text-[22px] font-light">
+              My name is Kaitlyn Andor.
             </p>
           </div>
           <div className="mt-4 lg:mt-4">
-            <h2 className="ml-0 lg:ml-6 ">Resume</h2>
+            <h2 className="ml-0 lg:ml-6 text-[35px] sm:text-[45px]">Resume</h2>
             <div className="overflow-y-scroll mb-4 h-[375px] sm:h-[450px]">
               <img
                 src={resume}
@@ -194,7 +195,7 @@ function App() {
         </div>
       </div>
       <h2
-        className="ml-4 mt-14 text-[35px] sm:text-[45px] text-[#454CFF] font-extrabold"
+        className="ml-0 sm:ml-4 mt-14 text-[35px] sm:text-[45px] text-[#454CFF] font-extrabold"
         id="skills-section"
       >
         Skills
@@ -218,23 +219,23 @@ function App() {
         })}
       </div>
       <h2
-        className="ml-4 mt-14 text-[45px] text-[#454CFF] font-extrabold"
+        className="ml-0 sm:ml-4 mt-14 text-[35px] sm:text-[45px] text-[#454CFF] font-extrabold"
         id="certification-section"
       >
         Certifications
       </h2>
-      <div className="flex flex-row flex-wrap justify-evenly bg-black w-full rounded-[36px]">
+      <div className="flex flex-row flex-wrap justify-center md:justify-evenly bg-black w-full rounded-[36px]">
         <img
           tabIndex={0}
           src={uxcertification}
           alt="A certification for Google's UX Design course."
-          className="w-[45%] rounded-[12px] m-4"
+          className="w-[80vw] sm:w-[95%] md:w-[45%] rounded-[12px] m-2 md:m-4"
         />
         <img
           tabIndex={0}
           src={backendcertification}
           alt="A certification for Free Code Camp's Backend and API course."
-          className="w-[45%] rounded-[12px] m-4"
+          className="w-[80vw] sm:w-[95%] md:w-[45%] rounded-[12px] m-2 md:m-4"
         />
       </div>
     </>
