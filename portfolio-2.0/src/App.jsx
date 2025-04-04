@@ -178,9 +178,10 @@ function App() {
         <div className="grid md:grid-cols-1 lg:grid-cols-2 m-4 md:m-8 text-white text-[35px] sm:text-[45px] font-extrabold">
           <div className="mt-4 lg:mt-4">
             <h2 id="aboutme-section" className="text-[35px] sm:text-[45px]">About Me</h2>
-            <p className="mb-4 text-[22px] font-light">
-              My name is Kaitlyn Andor and I'm a Junior Devloper based in New York. I have a passion for UX and UI design and hope to make the web more inclusive, accessible, and fun for all.
+            <p className="mb-4 text-[17px] sm:text-[22px] font-light">
+              My name is Kaitlyn Andor and I'm a Web Developer based in New York. I am a motivated, self-starter with a passion for development, UX/UI design, and an attention to detail that transforms project concepts into polished products.
             </p>
+            <p p className="mb-4 text-[17px] sm:text-[22px] font-light">Through my work, I hope to make the web a more accessible to all by prioritizing the WCAG (Web Content Accessibility Guidelines), ADA (Americans with Disabilities Act), and mobile first/responsive design.</p>
           </div>
           <div className="mt-4 lg:mt-4">
             <h2 className="ml-0 lg:ml-6 text-[35px] sm:text-[45px]">Resume</h2>
