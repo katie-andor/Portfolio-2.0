@@ -2,10 +2,7 @@ import "./App.css";
 import React, { useEffect, useState } from "react";
 import profilepicture from "/images/profilepicture.svg";
 import linkedin from "/images/linkedinicon.svg";
-import linkedinblack from "/images/linkediniconblack.svg";
 import github from "/images/githubicon.svg";
-import githubblack from "/images/githubiconblack.svg";
-import emailblack from "/images/emailiconblack.svg";
 import email from "/images/emailicon.svg";
 import uparrow from "/images/uparrowicon.svg";
 import resume from "/images/resume.png";
@@ -20,6 +17,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination, Keyboard } from "swiper/modules";
+import gdprojects from "./graphicdesignprojects.js";
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -275,11 +273,22 @@ function App() {
       >
         Graphic Design
       </h2>
-      <div>
+      <div className="flex flex-row flex-wrap justify-between mx-0 sm:mx-4">
+        {gdprojects.map((gdproject, index) => {
+          return (
+            <div key={index} className="flex flex-col flex-nowrap">
+              <h3 className='text-[35px] sm:text-[30px] text-white text-center bg-[#454CFF] mb-4 rounded-[36px]'>{gdproject.title}</h3>
+              <img src={gdproject.image} alt="" className="w-[700px] mb-4 border-2 border-black" />
+              <h4 className='w-[30%] mb-6 py-[3px] text-[35px] sm:text-[25px] text-white text-center bg-black mb-4 rounded-[36px] font-light'>See more</h4>
+            </div>
+          );
+        })}
+      </div>
+      {/* <div>
         {designs.map((design, index) => {
           return (
             <div key={index} className="">
-              <h3 className="text-center text-[35px] sm:text-[35px] text-white font-extrabold bg-[#454CFF] rounded-[36px]">
+              <h3 className="text-center text-[25px] sm:text-[35px] text-white font-extrabold bg-[#454CFF] rounded-[36px]">
                 {design.title}
               </h3>
 
@@ -298,7 +307,7 @@ function App() {
                     <img
                       src={image}
                       alt={""}
-                      className="w-[900px] mx-auto border-2 border-black"
+                      className="w-[70%] sm:w-[500px] md:w-[650px] lg:w-[800px] xl:w-[900px] mx-auto border-2 border-black"
                     />
                   </SwiperSlide>
                 ))}
@@ -306,7 +315,7 @@ function App() {
             </div>
           );
         })}
-      </div>
+      </div> */}
     </>
   );
 }
