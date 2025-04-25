@@ -15,6 +15,12 @@ import projects from "./projectdata.js";
 import skills from "./skillsdata.js";
 import designs from "./graphicdesign.js";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { Navigation, Pagination, Keyboard } from "swiper/modules";
+
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
 
@@ -120,75 +126,78 @@ function App() {
           />
         </div>
       </div>
-      <h2
-        className="ml-0 sm:ml-4 sm:mt-8 md:mt-14 text-[35px] sm:text-[45px] text-[#454CFF] font-extrabold"
-        id="projects-section"
-      >
-        Projects
-      </h2>
-
-      <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-4">
-        {projects.map((project, index) => {
-          return (
-            <a href={project.link} target="_blank">
-              <div
-                key={index}
-                className={`card w-full h-[50vw] sm:h-[370px] md:h-[250px] lg:h-[300px] xl:h-[250px] 2xl:h-[330px] bg-white rounded-[36px] text-white border-2 border-black flex flex-col relative group overflow-hidden transform transition-all duration-1000 ease-out ${
-                  isLoaded
-                    ? "opacity-100 translate-y-0"
-                    : "opacity-0 translate-y-10"
-                }`}
-              >
-                <img className="h-full" src={project.image} alt={project.alt} />
-                <div className="hidden md:flex flex-grow"></div>
+      <div id="projects-section">
+        <h2 className="ml-0 sm:ml-4 sm:mt-8 md:mt-14 text-[35px] sm:text-[45px] text-[#454CFF] font-extrabold">
+          Projects
+        </h2>
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-4">
+          {projects.map((project, index) => {
+            return (
+              <a href={project.link} target="_blank">
                 <div
-                  className="h-[300px] bg-black rounded-bl-[36px] rounded-br-[36px] absolute bottom-4 w-full transition-all duration-500 ease-in-out group-hover:h-full 
-                  md:group-hover:translate-y-[16px] md:transform md:translate-y-[290px] 
-                  lg:group-hover:translate-y-[16px] lg:transform lg:translate-y-[370px] lg:h-[390px] 
-                  xl:group-hover:translate-y-[16px] xl:transform xl:translate-y-[380px] xl:h-[390px] 
-                  2xl:group-hover:translate-y-[15px] 2xl:transform 2xl:translate-y-[370px] 2xl:h-[390px] 
-                  hidden md:flex flex-col"
+                  key={index}
+                  className={`card w-full h-[50vw] sm:h-[370px] md:h-[250px] lg:h-[300px] xl:h-[250px] 2xl:h-[330px] bg-white rounded-[36px] text-white border-2 border-black flex flex-col relative group overflow-hidden transform transition-all duration-1000 ease-out ${
+                    isLoaded
+                      ? "opacity-100 translate-y-0"
+                      : "opacity-0 translate-y-10"
+                  }`}
                 >
-                  <div className="flex justify-center items-center">
-                    <img
-                      className="w-[30px] mt-2"
-                      src={uparrow}
-                      alt="An up arrow icon."
-                    />
-                  </div>
-                  <div className="flex flex-col h-full opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-in-out transform translate-y-10 mr-6 ml-6 mb-6 xl:mt-2 2xl:mt-4 z-10">
-                    <h3 className="text-xl font-bold">{project.title}</h3>
-                    <p className="text-lg md:text-sm lg:text-lg xl:text-sm 2xl:text-lg">
-                      {project.description}
-                    </p>
-                    <div className=" flex flex-grow"></div>
-                    <div className="flex flex-row mb-4 xl:mt-2 gap-4">
-                      {project.tools.map((tool, i) => (
-                        <p
-                          key={i}
-                          className="border-white border-solid border-2 pl-2 pr-2 rounded-[5px]"
-                        >
-                          {tool}
-                        </p>
-                      ))}
+                  <img
+                    className="h-full"
+                    src={project.image}
+                    alt={project.alt}
+                  />
+                  <div className="hidden md:flex flex-grow"></div>
+                  <div
+                    className="h-[300px] bg-black rounded-bl-[36px] rounded-br-[36px] absolute bottom-4 w-full transition-all duration-500 ease-in-out group-hover:h-full
+                    md:group-hover:translate-y-[16px] md:transform md:translate-y-[290px]
+                    lg:group-hover:translate-y-[16px] lg:transform lg:translate-y-[370px] lg:h-[390px]
+                    xl:group-hover:translate-y-[16px] xl:transform xl:translate-y-[380px] xl:h-[390px]
+                    2xl:group-hover:translate-y-[15px] 2xl:transform 2xl:translate-y-[370px] 2xl:h-[390px]
+                    hidden md:flex flex-col"
+                  >
+                    <div className="flex justify-center items-center">
+                      <img
+                        className="w-[30px] mt-2"
+                        src={uparrow}
+                        alt="An up arrow icon."
+                      />
+                    </div>
+                    <div className="flex flex-col h-full opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 ease-in-out transform translate-y-10 mr-6 ml-6 mb-6 xl:mt-2 2xl:mt-4 z-10">
+                      <h3 className="text-xl font-bold">{project.title}</h3>
+                      <p className="text-lg md:text-sm lg:text-lg xl:text-sm 2xl:text-lg">
+                        {project.description}
+                      </p>
+                      <div className=" flex flex-grow"></div>
+                      <div className="flex flex-row mb-4 xl:mt-2 gap-4">
+                        {project.tools.map((tool, i) => (
+                          <p
+                            key={i}
+                            className="border-white border-solid border-2 pl-2 pr-2 rounded-[5px]"
+                          >
+                            {tool}
+                          </p>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div className="md:hidden bg-black text-white mt-4 p-4 rounded-[36px]">
-                <h3 className="text-xl font-bold">{project.title}</h3>
-                <p className="text-md mt-2">{project.description}</p>
-              </div>
-            </a>
-          );
-        })}
+                <div className="md:hidden bg-black text-white mt-4 p-4 rounded-[36px]">
+                  <h3 className="text-xl font-bold">{project.title}</h3>
+                  <p className="text-md mt-2">{project.description}</p>
+                </div>
+              </a>
+            );
+          })}
+        </div>
       </div>
-      <div className="bg-[#454CFF] w-full mr-auto ml-auto rounded-[36px] mt-18">
+      <div
+        className="bg-[#454CFF] w-full mr-auto ml-auto rounded-[36px] mt-18"
+        id="aboutme-section"
+      >
         <div className="grid md:grid-cols-1 lg:grid-cols-2 m-4 md:m-8 text-white text-[35px] sm:text-[45px] font-extrabold">
           <div className="mt-4 lg:mt-4">
-            <h2 id="aboutme-section" className="text-[35px] sm:text-[45px]">
-              About Me
-            </h2>
+            <h2 className="text-[35px] sm:text-[45px]">About Me</h2>
             <p className="mb-4 text-[17px] sm:text-[22px] xl:text-[25px] font-light">
               My name is Kaitlyn Andor and I'm a Web Developer based in New
               York. I am a motivated, self-starter with a passion for
@@ -217,29 +226,28 @@ function App() {
           </div>
         </div>
       </div>
-      <h2
-        className="ml-0 sm:ml-4 mt-14 text-[35px] sm:text-[45px] text-[#454CFF] font-extrabold"
-        id="skills-section"
-      >
-        Skills
-      </h2>
-      <div className="flex flex-row justify-evenly flex-wrap">
-        {skills.map((skill, index) => {
-          return (
-            <div
-              key={index}
-              tabIndex={0}
-              className="bg-[#454CFF] hover:bg-black rounded-[50px] text-white text-[17px] sm:text-[22px] w-[130px] sm:w-[200px] mt-2 mb-4 sm:m-4 flex flex-row justify-evenly items-center p-2 transition-transform duration-300 hover:scale-115"
-            >
-              <img
-                src={skill.image}
-                alt={skill.alt}
-                className="w-[30px] sm:w-[50px]"
-              />
-              <h3>{skill.caption}</h3>
-            </div>
-          );
-        })}
+      <div id="skills-section">
+        <h2 className="ml-0 sm:ml-4 mt-14 text-[35px] sm:text-[45px] text-[#454CFF] font-extrabold">
+          Skills
+        </h2>
+        <div className="flex flex-row justify-evenly flex-wrap">
+          {skills.map((skill, index) => {
+            return (
+              <div
+                key={index}
+                tabIndex={0}
+                className="bg-[#454CFF] hover:bg-black rounded-[50px] text-white text-[17px] sm:text-[22px] w-[130px] sm:w-[200px] mt-2 mb-4 sm:m-4 flex flex-row justify-evenly items-center p-2 transition-transform duration-300 hover:scale-115"
+              >
+                <img
+                  src={skill.image}
+                  alt={skill.alt}
+                  className="w-[30px] sm:w-[50px]"
+                />
+                <h3>{skill.caption}</h3>
+              </div>
+            );
+          })}
+        </div>
       </div>
       <h2
         className="ml-0 sm:ml-4 mt-14 text-[35px] sm:text-[45px] text-[#454CFF] font-extrabold"
@@ -274,11 +282,27 @@ function App() {
               <h3 className="text-center text-[35px] sm:text-[35px] text-white font-extrabold bg-[#454CFF] rounded-[36px]">
                 {design.title}
               </h3>
-              <div className="flex flex-row no-wrap">
-                {design.images.map((image, i) => {
-                  return <img key={i} src={image} alt={""} className="h-60" />;
-                })}
-              </div>
+
+              <Swiper
+                modules={[Navigation, Pagination, Keyboard]}
+                spaceBetween={10}
+                slidesPerView={1}
+                pagination={{ clickable: true }}
+                navigation
+                className="my-4"
+                loop={true}
+                keyboard={{ enabled: true }}
+              >
+                {design.images.map((image, i) => (
+                  <SwiperSlide key={i} tabIndex={0}>
+                    <img
+                      src={image}
+                      alt={""}
+                      className="w-[900px] mx-auto border-2 border-black"
+                    />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
             </div>
           );
         })}
