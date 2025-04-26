@@ -1,14 +1,14 @@
-import html from './skillsdataimages/html.svg';
-import css from './skillsdataimages/css.svg';
-import javascript from './skillsdataimages/javascript.svg'
-import tailwind from './skillsdataimages/tailwind.svg';
-import figma from './skillsdataimages/figma.svg';
-import react from './skillsdataimages/react.svg';
-import wordpress from './skillsdataimages/wordpress.svg';
-import git from './skillsdataimages/git.svg';
-import github from './skillsdataimages/github.svg';
-import php from './skillsdataimages/php.svg';
-import sql from './skillsdataimages/sql.svg';
+import html from '../images/skillsdataimages/html.svg';
+import css from '../images/skillsdataimages/css.svg';
+import javascript from '../images/skillsdataimages/javascript.svg'
+import tailwind from '../images/skillsdataimages/tailwind.svg';
+import figma from '../images/skillsdataimages/figma.svg';
+import react from '../images/skillsdataimages/react.svg';
+import wordpress from '../images/skillsdataimages/wordpress.svg';
+import git from '../images/skillsdataimages/git.svg';
+import github from '../images/skillsdataimages/github.svg';
+import php from '../images/skillsdataimages/php.svg';
+import sql from '../images/skillsdataimages/sql.svg';
 
 const skills = [
     {

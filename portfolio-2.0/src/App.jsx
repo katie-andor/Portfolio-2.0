@@ -8,11 +8,11 @@ import github from "/images/githubicon.svg";
 import email from "/images/emailicon.svg";
 import uparrow from "/images/uparrowicon.svg";
 import resume from "/images/resume.png";
-import uxcertification from "./certifications/uxdesign.png";
-import backendcertification from "./certifications/backend.png";
-import projects from "./projectdata.js";
-import skills from "./skillsdata.js";
-import gdprojects from "./graphicdesignprojects.js";
+import uxcertification from "./images/certifications/uxdesign.png";
+import backendcertification from "./images/certifications/backend.png";
+import projects from "./data/projectdata.js";
+import skills from "./data/skillsdata.js";
+import gdprojects from "./data/graphicdesignprojects.js";
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);

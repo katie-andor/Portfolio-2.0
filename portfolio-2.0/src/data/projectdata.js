@@ -1,10 +1,10 @@
-import portfolio from './projectdataimages/PortfolioImage.png';
-import shelves from './projectdataimages/Shelves.png';
-import pokedex from './projectdataimages/PokeDexImage.png';
-import cuphead from './projectdataimages/CupheadImage.png';
-import esports from './projectdataimages/EsportsImage.png';
-import NYIT from './projectdataimages/NYITImage.png';
-import budget from './projectdataimages/Budget.png';
+import portfolio from '../images/projectdataimages/PortfolioImage.png';
+import shelves from '../images/projectdataimages/Shelves.png';
+import pokedex from '../images/projectdataimages/PokeDexImage.png';
+import cuphead from '../images/projectdataimages/CupheadImage.png';
+import esports from '../images/projectdataimages/EsportsImage.png';
+import NYIT from '../images/projectdataimages/NYITImage.png';
+import budget from '../images/projectdataimages/Budget.png';
 
 const projects = [
     {

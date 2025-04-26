@@ -1,14 +1,14 @@
-import portfolio from "./graphicdesignimages/displayedprojects/01.svg";
-import shelves from "./graphicdesignimages/displayedprojects/02.svg";
-import budgeting from './graphicdesignimages/displayedprojects/10.svg';
+import portfolio from "../images/graphicdesignimages/displayedprojects/01.svg";
+import shelves from "../images/graphicdesignimages/displayedprojects/02.svg";
+import budgeting from '../images/graphicdesignimages/displayedprojects/10.svg';
 
-const budgetingImages = import.meta.glob('./graphicdesignimages/budgetingapp/*.svg', { eager: true });
+const budgetingImages = import.meta.glob('../images/graphicdesignimages/budgetingapp/*.svg', { eager: true });
 const budgetingImagesList = Object.values(budgetingImages).map(module => module.default);
 
-const shelvesImages = import.meta.glob('./graphicdesignimages/theshelves/*.svg', { eager: true });
+const shelvesImages = import.meta.glob('../images/graphicdesignimages/theshelves/*.svg', { eager: true });
 const shelvesImagesList = Object.values(shelvesImages).map(module => module.default);
 
-const portfolioImages = import.meta.glob('./graphicdesignimages/portfoliowebsite/*.svg', { eager: true });
+const portfolioImages = import.meta.glob('../images/graphicdesignimages/portfoliowebsite/*.svg', { eager: true });
 const portfolioImagesList = Object.values(portfolioImages).map(module => module.default);
 
 const gdprojects = [
