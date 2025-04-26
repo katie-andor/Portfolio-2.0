@@ -278,19 +278,19 @@ function App() {
             >
               Graphic Design
             </h2>
-            <div className="flex flex-row flex-wrap justify-between mx-0 sm:mx-4">
+            <div className="flex flex-col md:flex-row flex-wrap justify-between mx-0 sm:mx-4">
               {gdprojects.map((gdproject, index) => {
                 return (
-                  <div key={index} className="flex flex-col flex-nowrap">
-                    <h3 className="text-[35px] sm:text-[30px] text-white text-center bg-[#454CFF] mb-4 rounded-[36px]">
+                  <div key={index} className="flex flex-col flex-nowrap w-[100%] md:w-[49%]">
+                    <h3 className="text-[25px] sm:text-[35px] md:text-[25px] lg:text-[30px] text-white text-center bg-[#454CFF] mb-4 rounded-[36px]">
                       {gdproject.title}
                     </h3>
                     <img
                       src={gdproject.image}
                       alt={gdproject.alt}
-                      className="w-[700px] mb-4 border-2 border-black"
+                      className="w-[100%] mb-4 border-2 border-black"
                     />
-                    <button onClick={() => navigate(`/graphicdesign/${index}`)} className="cursor-pointer w-[30%] mb-6 py-[3px] text-[35px] sm:text-[25px] text-white text-center bg-black mb-4 rounded-[36px] font-light">
+                    <button onClick={() => navigate(`/graphicdesign/${index}`)} className="cursor-pointer w-[40%] sm:w-[30%] mb-6 py-[3px] text-[20px] sm:text-[25px] md:text-[18px] lg:text-[25px] text-white text-center bg-black mb-4 rounded-[36px] font-light">
                       See more
                     </button>
                   </div>
