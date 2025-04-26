@@ -1,6 +1,6 @@
 import { Link, useParams } from "react-router-dom";
 import gdprojects from "./data/graphicdesignprojects";
-import backarrow from "../public/images/backarrowicon.svg";
+import backarrow from "./images/backarrowicon.svg";
 
 function GraphicDesignSeeMore() {
   const { id } = useParams();
