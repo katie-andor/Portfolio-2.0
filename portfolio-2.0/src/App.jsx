@@ -280,7 +280,7 @@ function App() {
             >
               Graphic Design
             </h2>
-            <h3>Projects</h3>
+            <h3 className="ml-0 sm:ml-4 mt-4 text-[30px] sm:text-[40px] text-[#454CFF] font-extrabold">Projects</h3>
             <div className="flex flex-col md:flex-row flex-wrap justify-between mx-0 sm:mx-4">
               {gdprojects.map((gdproject, index) => {
                 return (
@@ -306,7 +306,7 @@ function App() {
                 );
               })}
             </div>
-            <h3>Miscellanious Work</h3>
+            <h3 className="ml-0 sm:ml-4 mt-4 text-[30px] sm:text-[40px] text-[#454CFF] font-extrabold">Miscellaneous Work</h3>
             <div className="flex flex-col md:flex-row flex-wrap justify-between mx-0 sm:mx-4">
               <div className="flex flex-col flex-nowrap w-[100%] md:w-[49%]">
                 <h4 className="text-[25px] sm:text-[35px] md:text-[25px] lg:text-[30px] text-white text-center bg-[#454CFF] mb-4 rounded-[36px]">
