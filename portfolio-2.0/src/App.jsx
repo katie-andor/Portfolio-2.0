@@ -78,21 +78,21 @@ function App() {
                   <div className="m-4 flex flex-col justify-around">
                     <nav>
                       <ul className="sm:text-[25px] md:text-[20px] lg:text-[30px] italic">
-                        <a href="#projects-section">
-                          <li className="hover:underline">Projects</li>
-                        </a>
-                        <a href="#aboutme-section">
-                          <li className="hover:underline">About Me/Resume</li>
-                        </a>
-                        <a href="#skills-section">
-                          <li className="hover:underline">Skills</li>
-                        </a>
-                        <a href="#certification-section">
-                          <li className="hover:underline">Certifications</li>
-                        </a>
-                        <a href="#design-section">
-                          <li className="hover:underline">Graphic Design</li>
-                        </a>
+                        <li className="hover:underline">
+                          <a href="#projects-section">Projects</a>
+                        </li>
+                        <li className="hover:underline">
+                          <a href="#aboutme-section">About Me/Resume</a>
+                        </li>
+                        <li className="hover:underline">
+                          <a href="#skills-section">Skills</a>
+                        </li>
+                        <li className="hover:underline">
+                          <a href="#certification-section">Certifications</a>
+                        </li>
+                        <li className="hover:underline">
+                          <a href="#design-section">Graphic Design</a>
+                        </li>
                       </ul>
                     </nav>
                   </div>
