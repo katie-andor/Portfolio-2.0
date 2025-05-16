@@ -2,7 +2,7 @@ import "./App.css";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import GraphicDesignSeeMore from "./graphicdesignseemore.jsx";
 import React, { useEffect, useState } from "react";
-import profilepicture from "/images/profilepicture.svg";
+import profilepicture from "/images/profilepicture2.png";
 import linkedin from "/images/linkedinicon.svg";
 import github from "/images/githubicon.svg";
 import email from "/images/emailicon.svg";
