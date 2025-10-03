@@ -7,9 +7,10 @@ import linkedin from "/images/linkedinicon.svg";
 import github from "/images/githubicon.svg";
 import email from "/images/emailicon.svg";
 import uparrow from "/images/uparrowicon.svg";
-import resume from "/images/resume.png";
+import resume from "./images/resumenew.png";
 import uxcertification from "./images/certifications/uxdesign.png";
 import backendcertification from "./images/certifications/backend.png";
+import csharpcertification from './images/certifications/csharp.png';
 import projects from "./data/projectdata.js";
 import skills from "./data/skillsdata.js";
 import gdprojects from "./data/graphicdesignprojects.js";
@@ -277,6 +278,12 @@ function App() {
                   tabIndex={0}
                   src={backendcertification}
                   alt="A certification for Free Code Camp's Backend and API course."
+                  className="w-[80vw] sm:w-[95%] md:w-[45%] rounded-[12px] m-2 md:m-4"
+                />
+                <img
+                  tabIndex={0}
+                  src={csharpcertification}
+                  alt="A certification for Free Code Camp and Microsoft's C# Foundational Course."
                   className="w-[80vw] sm:w-[95%] md:w-[45%] rounded-[12px] m-2 md:m-4"
                 />
               </div>

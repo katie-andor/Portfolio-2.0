@@ -1,6 +1,7 @@
 import portfolio from "../images/graphicdesignimages/displayedprojects/01.svg";
 import shelves from "../images/graphicdesignimages/displayedprojects/02.svg";
 import budgeting from '../images/graphicdesignimages/displayedprojects/10.svg';
+import aximmica from '../images/graphicdesignimages/displayedprojects/AximMica.png';
 
 const budgetingImages = import.meta.glob('../images/graphicdesignimages/budgetingapp/*.svg', { eager: true });
 const budgetingImagesList = Object.values(budgetingImages).map(module => module.default);
@@ -11,7 +12,17 @@ const shelvesImagesList = Object.values(shelvesImages).map(module => module.defa
 const portfolioImages = import.meta.glob('../images/graphicdesignimages/portfoliowebsite/*.svg', { eager: true });
 const portfolioImagesList = Object.values(portfolioImages).map(module => module.default);
 
+const aximImages = import.meta.glob('../images/graphicdesignimages/aximmica/*.png', { eager: true });
+const aximImagesList = Object.values(aximImages).map(module => module.default);
+
 const gdprojects = [
+  {
+    title: "Axim Mica",
+    image: aximmica,
+    allImages: aximImagesList,
+    alt: `The homepage of Axim Mica's website.`,
+    allAlt: `images of Axim Mica's website UI`
+  },
   {
     title: "Portfolio Website 1.0",
     image: portfolio,
@@ -32,7 +43,7 @@ const gdprojects = [
     allImages: budgetingImagesList,
     alt: 'Notifications page of the budgeting app',
     allAlt: 'images of the budgeting app UI'
-  },
+  }
 ];
 
 export default gdprojects;

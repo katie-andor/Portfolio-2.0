@@ -5,6 +5,7 @@ import cuphead from '../images/projectdataimages/CupheadImage.png';
 import esports from '../images/projectdataimages/EsportsImage.png';
 import NYIT from '../images/projectdataimages/NYITImage.png';
 import budget from '../images/projectdataimages/Budget.png';
+import aximmica from '../images/projectdataimages/AximMica.png';
 
 const projects = [
     {
@@ -14,6 +15,14 @@ const projects = [
         link: 'https://github.com/katie-andor/portfolio-website',
         alt: `The Windows XP themed landing page of Katie's old portfolio website.`,
         tools: ['React.js', 'HTML', 'Tailwind', 'CSS']
+    },
+    {
+        title: 'Axim Mica',
+        description: `Completed a total overhaul of Axim Mica's previous website, including new layout, branding, and content.`,
+        image: aximmica,
+        link: 'https://aximmica.com/',
+        alt: `The homepage of the Axim Mica website.`,
+        tools: ['WordPress', 'HTML', 'CSS', 'JavaScript', 'SEO']
     },
     {
         title: 'The Shelves',
